@@ -150,9 +150,9 @@ def step_counts_per_sec(raw_acc, peak_win_len=3, period_min=5, period_max=15, fs
     return peak_data
 
 raw_acc = pyreadr.read_r('acc_xyz_for_step_counts.rds')
-raw_ac = raw_acc[None]
+raw_acc = raw_acc[None]
 raw_acc = raw_acc.values
-print(f"Total steps are:{step_counts_per_sec(raw_acc)}")
+print(f"Total steps are:{sum(step_counts_per_sec(raw_acc))}")
 
 print("all done")
 
